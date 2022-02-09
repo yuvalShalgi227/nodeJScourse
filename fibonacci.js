@@ -1,6 +1,9 @@
+const isErrorInInput = require('./checkInput')
+const args = process.argv;
+if (isErrorInInput(args)) return;
+const num = args[2];
+//-------------
 
-//check user input is a number
-const num = process.argv[2];
 
 function febonichiBuilder(num) {
     var res= [1,1]
@@ -10,7 +13,6 @@ function febonichiBuilder(num) {
     }
     return res[res.length -1 ];
 }
-
 
 console.log(febonichiBuilder(num));
 

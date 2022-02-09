@@ -1,8 +1,18 @@
 
-var arg = process.argv.splice(2);
-
+const num = process.argv[2];
 
 function factorail(num) {
+    if (num === 0 || num === 1) return 1;
+    let res =1;
+    let temp = num;
+    for (i=0; i<temp; i++) {
+        res *= num;
+        num = num -1; 
+    }
+    return res;
+}
+
+function factorailMemo(num) {
     if (num === 0 || num === 1) return 1;
     let res =1;
     let temp = num;
