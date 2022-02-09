@@ -19,20 +19,21 @@ function factorail(num) {
 function factorailRecuresive(num) {
     if (num < 2) return 1;
     while (num > 0) {
-        return num *= factorailMemo(num -1);
+        console.log('1')
+        return num *= factorailRecuresive(num -1);
     }
 }
 
 function factorailMemo(cash) {
-    return (n =cash) => { 
+    var n = cash;
+    return function x() { 
         while (n > 0) {
             if (n < 2) return 1;
-            return n *= x(n-1);
+            return n *= x(n =n-1);
         }
     }
 }
 
+const y = factorailMemo(num);
 
-const x = factorailMemo(num);
-
-console.log(x());
+console.log(y());
