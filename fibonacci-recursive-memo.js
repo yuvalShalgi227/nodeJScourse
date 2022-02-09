@@ -4,7 +4,6 @@ const args = process.argv;
 if (isErrorInInput(args)) return;
 const num = args[2];
 
-console.log('starting' + num);
 
 var fib = function(n) {
     if (n < 2){
