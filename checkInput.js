@@ -9,4 +9,10 @@ module.exports = (args) =>  {
         console.log('wrong input, expected a number got:' + args[2]);
         return true;
     }
+
+    if (Number.isInteger(args[2])) {
+        console.log('wrong input, expected a integer and got:' + args[2]);
+        return true;
+    }
+    return false;
 }
